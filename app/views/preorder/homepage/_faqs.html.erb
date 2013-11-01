@@ -4,64 +4,89 @@
     <ul>
       <li class=''>
         <details class=''>
-          <summary class=''>How do I setup Amazon Payments?</summary>
-          <p>You'll need to <a href="https://payments.amazon.com/sdui/sdui/accountstatus">create an Amazon Seller Central account</a>. Afterwards, get your access key and secret key from the "Integration" tab on your AWS account. <a href="https://payments.amazon.com/sdui/sdui/helpTab/Checkout-by-Amazon/Advanced-Integration-Help/Using-Your-Access-Key">Click here for more info</a>.
-          <br />
-          <br />
-          Once you have your access key and secret key, head over to <code>config/settings.yml</code>. Change <code>amazon_access_key</code> and <code>amazon_secret_key</code> appropriately.</p>
-        </details>
-      </li>
-      <li>
-        <details class=''>
-          <summary>Can I use another payments provider?</summary>
-          <p>Of course. We haven't built in support for other providers, but we recommend that you take a look at <a href="https://stripe.com">Stripe</a> or <a href="https://wepay.com">WePay</a>.</p>
-        </details>
-      </li>
-      <li>
-        <details class=''>
-          <summary>How do I edit the FAQ?</summary>
-          <p>The faq is a partial located in <code>app/views/preorder/homepage/_faq.html.erb</code> The <code>summary</code> tag is the title, the <code>p</code> is the body. Make sure to add an <code>li</code> tag for each FAQ entry.</p>
-        </details>
-      </li>
-      <li>
-        <details class=''>
-          <summary>How do I change around the images, product name, etc?</summary>
-          <p>The best way is in <code>config/settings.yml</code>. It has variables for several different parts, the video, the product name, the call to action button ("Fork Now"), and several more.
+          <summary class=''>Who are we?</summary>
+          <p>
+            <p>Xavier is a mechatronic and energy system engineer, from ESME
+            Sudria french school. He administrates the project and technologies
+            development.</p>
+            <p>Julien has a Master in Commercial Strategy and negociation skills
+            from La Sorbonne. His role in the team is to build a commercial
+            strategy, develop a protfolio of business customers and get
+            partnerships with companies.</p>
+            <p>Martin has a Master of Science from Imperial College London and one
+            of the top French engineering universities Supélec. He manages
+            project strategy and marketing.</p>
           </p>
+        </details>
+      </li>
+      <li>
+        <details class=''>
+          <summary>Who will be able to use it?</summary>
+          <p>Anyone connected to internet. Unide platform is especially
+          designed to be easy to interact with. Indeed, while currently
+          command-line based, its protocole relies on universal, simple and
+          robust http requests.</p>
+        </details>
+      </li>
+      <li>
+        <details class=''>
+          <summary>What technologies does Unide rely on?</summary>
+          <p>
+            <ul>
+              <li> Container technology (LXC by docker) for painless virtualization and comfortable cocoons for your future work
+              <li> Our DNA project that brings most powerful and popular productivity gadgets to your dev environment
+              <li> Juju charms to help you, encapsulate your app and store hundreds of useful and reusable services
+              <li> Juju software to manage them like a boss
+              <li> Ansible project to shape them, with full (yeah, root) control, still like a boss
+              <li> Etcd storage for innovative and dead simple configuration operation
+              <li> Hipache for SSL protection, nursering your data, and robust interface to the hostile internet world
+              <li> Go language for hyperactive reaction, python for cross-platform and efficient client
+              <li> And so much more for testing, covering, collaborating, VM versioning, generic github project building, workflow optimization, ...
+            </ul>
+          </p>
+        </details>
+      </li>
+      <li>
+        <details class=''>
+          <summary>How about the security?</summary>
+          <p>Any communication with the Unide platform is performed through SSL
+          encryption (signed certificates are downloaded under user:password
+          authentification). Your private workspace is under ssh protection.</p>
         </details>
       </li>
     </ul>
     <ul class='col2'>
       <li>
         <details class=''>
-          <summary>How do I change the CSS?</summary>
-          <p>Head over to <code>app/assets/stylesheets/variables.css.scss</code>. It makes it easy to change around the elements used throughout the HTML.
-          <br />
-          <br />
-          Alternatively, you can dive right into the CSS, have a look at <code>app/assets/stylesheets/main.css.scss</code>.</p>
+          <summary>Why $65000?</summary>
+          <p>We are willing to give up the money we could make in a big company
+          because we believe in Unide and because we believe it can really make
+          a difference in your day to day programming experience. However we
+          need financial support to keep developing it and preparing the
+          release. Paying three persons and servers during 6 months at minimum
+          wage (1 430 €) if you include taxes sums up to 47 000 €. That is why
+          we need your help!</p>
         </details>
       </li>
       <li class=''>
         <details class=''>
           <summary>Why did you release this?</summary>
-          <p>Hardware startups are less welcome on Kickstarter than they were 6 months ago. We needed to roll our own kickstarter, so we did. Other hardware startups probably will too, so we made it easier for them by open sourcing our way of doing it.</p>
+          <p>Pas mal cette question tiens.</p>
         </details>
       </li>
       <li class=''>
         <details class=''>
-          <summary class=''>What software stack does this use?</summary>
-          <p>It's a Ruby on Rails app that makes heavy use of SCSS, Kickstarter's wonderful <code>amazon_flex_pay</code> gem, and a hint of CoffeeScript.</p>
+          <summary class=''>Will we make money with your money?</summary>
+          <p>We believe in the power of open-source. We believe in the power of
+          crowdsourcing.  Using Unide for Open-source projects is totally free.
+          However, if you want your project to be private and secret, you will
+          need a premium private account.</p>
         </details>
       </li>
       <li class=''>
         <details class=''>
-          <summary class=''>How do I deploy it?</summary>
-          <p>We recommend using Heroku. We include a Procfile for you, so all you need to do is:
-          <p>
-            <p>Install the <a href="https://toolbelt.heroku.com/">Heroku Toolbelt</a></p>
-            <p>Run <code>heroku create</code> in Selfstarter's folder</code></p>
-            <p>Run <code>git push heroku master</code> in Selfstarter's folder</p>
-          </p>
+          <summary class=''>How can you contact us?</summary>
+          <p>You can ask any other question by emailing us at unide.team@gmail.com</p>
         </details>
       </li>
     </ul>

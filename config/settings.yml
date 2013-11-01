@@ -7,26 +7,27 @@
 
 # Set your project goal here - dollar amount
 # NOTE: if you manually want to adjust your progress to test the site, head over to the Order model (app/models/order.rb)
-project_goal: 100000
+project_goal: 65000
 
 # If you want to edit the FAQ, head over to app/views/preorder/homepage/_faqs.html.erb
 
 # This'll be both the page title (<title></title>) and the name in the header
-product_name: "Selfstarter"
+product_name: "Unide"
 
 # This will be used in sentences like Hooray You've just reserved product_description
-product_description: "a set of widgets"
+product_description: "Your hacker's backpack"
 
 # An image showcasing your product -- it'll show up when you pin your product
 # It should be in app/assets/images
-product_image_path: "my-product-image.png"
+product_image_path: "logo-unide.png"
 
 # The message on the preorder page, Lockitron's is ""
-value_proposition: "Roll your own crowdfunding"
+value_proposition: "Hackers' Backpack"
 
 # YouTube or Vimeo Video URL (The embed URL, without the query string options)
 # Replace /embed/ in your video url path with /v/ for video playback to work.
-video_embed_url: "https://www.youtube.com/v/D1L3o88GKew"
+#video_embed_url: "https://www.youtube.com/v/D1L3o88GKew"
+video_embed_url: "http://www.youtube.com/watch?v=7HKoqNJtMTQ"
 
 # If set to true, then the image at "/assets/video_placeholder.png" will be shown in place of the youtube
 # video.  When the user clicks it, the vid will replace the image and start playing.
@@ -63,32 +64,32 @@ primary_stat: "backers"
 primary_stat_verb: 'backer'
 
 # The 2nd call to action button, towards the middle-ish of the page
-middle_reserve_text: "Reserve Now"
+middle_reserve_text: "Keep in Touch"
 
 # When the project should end
-expiration_date: <%= DateTime.now + 29 %>
+expiration_date: <%= DateTime.now + 44 %>
 
 # Text to show inside the progress bar, when the goal reaches/exceeds 100%
-progress_text: "Implemented"
+progress_text: "Funded"
 
 # Call to action section
 
 # On Lockitron, it's "First Batch Ships in March 2013"
-ships: "Ships...sometime"
+ships: "Connect on February 2014"
 
 # On Lockitron, it's "Reserve Now"
-call_to_action: "Reserve Now"
+call_to_action: "Contribute"
 # On Lockitron, this is "Only $149 for a limited time"
-price_human: "It costs money!"
+price_human: "Only $50 for full development stack"
 
 # The paragraph below the price. You'd probably say something about how you're not going to charge them before it ships (so it's less risky).
-dont_give_them_a_reason_to_say_no: "You'll get this exact site. All you'll need to get started is a great product."
+dont_give_them_a_reason_to_say_no: "Be part of DevOps Revolution"
 
 # Social Stuff
 facebook_app_id: "1234567890"
 # Tweets are prefixed with "I'm #{Settings.primary_stat} number X for #{Settings.product_name}"
 # Maybe mention something about your product vision -- e.g. "to replace keys with my phone"
-tweet_text: "to crowdfund"
+tweet_text: "to enhance your skills"
 
 # Google Analytics
 google_id: "1234567890"
