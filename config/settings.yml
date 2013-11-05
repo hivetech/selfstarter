@@ -90,7 +90,7 @@ dont_give_them_a_reason_to_say_no: "Follow the open development on Github and co
 facebook_app_id: "1234567890"
 # Tweets are prefixed with "I'm #{Settings.primary_stat} number X for #{Settings.product_name}"
 # Maybe mention something about your product vision -- e.g. "to replace keys with my phone"
-tweet_text: "to enhance your skills"
+tweet_text: "to crowdfund"
 
 # Google Analytics
 google_id: "1234567890"
