@@ -3,13 +3,17 @@
     <div class="main_content <%= "payment_options" if Settings.use_payment_options %>">
       <h3>Check out</h3>
       <p>
-        All of your payment information will be secured and stored with Amazon Payments. If you don't have an Amazon account, simply select "I'm a new Customer" on the next page.
+      You can contribute to unide by two means. Head out soon to our <a
+        href="http://indiegogo.com">Indiegogo campaign</a> or join us building
+      Unide on <a href=https://github.com/hivetech>Github</a>. Either ways you
+      can subscribe to our mailing list, and
+      we will keep you updated.
         <br />
         <br />
         <% if Settings.use_payment_options %>
           Select a payment option and enter your email address below.
         <% else %>
-          Enter your email address below.
+          Mailing list
         <% end %>
 
       </p>
@@ -21,7 +25,7 @@
               <%= email_field_tag "email", nil, :placeholder => "Email address", :required => "required", :id => "email" %>
               <%= hidden_field_tag "preorder", true %>
               <%= hidden_field_tag "quantity", params[:quantity] %>
-              <%= submit_tag "Checkout", :class => "blue_button disabled", :id => "amazon_button" %>
+              <%= submit_tag "Subscribe", :class => "blue_button disabled", :id => "amazon_button" %>
             </div>
           </div>
         </div>
