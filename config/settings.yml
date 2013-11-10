@@ -99,3 +99,68 @@ google_id: "UA-45617200-1"
 # They're in app/assets/images/#{pointer_number}-background.png
 # So, the first key point, it's at app/assets/images/1-background.png
 # Alternatively, change it up in app/assets/stylesheets/homepage/key_points.css.scss
+
+
+## Even more templated
+#  Key points
+title_point_one: What is Unide
+key_point_one: |
+  Unide is a collaborative workplace for developers combinig smart and
+  innovative tools. It was put together by HiveTech to help teams build complex
+  softwares more efficiently.
+
+title_point_two: Try it
+key_point_two: |
+  The tools we're developing are fully open source and ready to be integrated
+  in your workspace to boost and ease your work. Also, you will be soon able to
+  connect to a coherent development platform hosted in the cloud that combine
+  them.
+
+title_point_three: Quick Glance
+key_point_three: |
+  - Your environment powered by the best of open source
+  - Work with your team, in real time
+  - Plug databases, dashboards, hundreds of services
+  - Customize everything, get full control over emerging technologies
+
+title_point_four: Get involved
+key_point_four: |
+  Help us improve project development by spreading the word around you and
+  supporting our Funding Campaign. If you're interested in what's under the
+  hood or want to contribute, you can find a true insight of the technologies
+  we're developing on Github.
+
+
+#  Following points
+title_other_one: Community driven
+other_point_one: |
+  The common environment available is built on top of most popular
+  and powerful tools in the open source community. Unide is designed to
+  easily integrate new, smart, ideas that come up every day.
+
+title_other_two: Cutting edge
+other_point_two: |
+  Unide integrates (among others) the neat work done by Ubuntu,
+  Dotcloud, Google, Github. It embraces relevant emerging technologies in
+  virtualization, cloud deployment, collaboration, ...
+
+title_other_three: Secured
+other_point_three: |
+  Any communication with the Unide platform is performed through SSL
+  encryption. Your private workspace uses ssh protocol. We don't mess
+  around with security.
+
+title_other_four: Same money
+other_point_four: |
+  Services deployed are lightweight and our tools are commited to
+  efficiency. Solve more complex problems with less ressources.
+
+# Copyright mention at the bottom
+company: © 2013 HiveTech, SAS.
+blog: http://hivetech.github.io
+contact: team@unide.co
+github_profile: https://github.com/hivetech
+
+#TODO Need html rendering - checkout_main: app/views/preorder/checkout.html.erb
+checkout_sidebar: |
+    On November 17th ! So subscribe to our mailing list you will be hearing from us very soon.

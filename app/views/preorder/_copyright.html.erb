@@ -3,13 +3,13 @@
   <div class="wrapper clearfix">
     <ul>
       <li>
-        <a href="https://github.com/hivetech">GitHub</a> |
-        <a href="mailto:team@unide.co">Contact</a> |
+        <a href="<%= Settings.github_profile %>">GitHub</a> |
+        <a href="mailto:<%= Settings.contact %>">Contact</a> |
         <%#<a href="/blog">Blog</a>%>
-        <a href="http://hivetech.github.io/">Blog</a>
+        <a href="<%= Settings.blog %>">Blog</a>
       </li>
     </ul>
-    <p class="pull-right">© 2013 HiveTech, SAS.</p><br>
+    <p class="pull-right"><%= Settings.company %></p><br>
     <p class="pull-right"> Selfstarter design by Lockitron. MIT Licensed.</p>
   </div>
 </div>
