@@ -1,7 +1,7 @@
 <div class="gray_background">
   <div class="wrapper clearfix">
     <div class="main_content <%= "payment_options" if Settings.use_payment_options %>">
-      <h3>Check out</h3>
+      <h3>Support</h3>
       <p>
       You can contribute to unide by two means. Head out soon to our <a
         href="http://indiegogo.com">Indiegogo campaign</a> or join us building
@@ -22,10 +22,10 @@
         <div class="checkout_controls">
           <div class="checkout_controls_wrapper">
             <div class="checkout_controls_inner">
-              <%= email_field_tag "email", nil, :placeholder => "Email address", :required => "required", :id => "email" %>
+              <%= email_field_tag "email", nil, :placeholder => "coming !", :required => "required", :id => "email" %>
               <%= hidden_field_tag "preorder", true %>
               <%= hidden_field_tag "quantity", params[:quantity] %>
-              <%= submit_tag "Subscribe", :class => "blue_button disabled", :id => "amazon_button" %>
+              <%#<%= submit_tag "Subscribe", :class => "blue_button disabled", :id => "amazon_button" %>
             </div>
           </div>
         </div>
