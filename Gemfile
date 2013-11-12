@@ -31,8 +31,8 @@ end
 # jQuery
 gem 'jquery-rails'
 
-# Kickstarter's awesome Amazon Flexible Payments gem
-gem 'amazon_flex_pay'
+# Stripe Payments gem
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Configuration File
 gem 'rails_config'
