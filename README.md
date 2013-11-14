@@ -113,4 +113,5 @@ send out a pull request.
 
 There aren't any tests yet. Tests are very welcome!
 
-
+TODO Mailchimp integration
+TODO ascii.io integration

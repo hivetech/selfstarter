@@ -4,7 +4,6 @@ class PreorderController < ApplicationController
   def index
   end
 
-  #def create
   def checkout!
     @user = User.find_or_create_by_email!(params[:email])
     redirect_to root_url unless params[:stripe_token]
@@ -29,5 +28,37 @@ class PreorderController < ApplicationController
 
   def share
     @order = Order.find_by_uuid(params[:uuid])
+  end
+
+  def subscribe
+    # Assume MAILCHIMP_API_KEY and MAILCHIMP_LIST_ID are set
+    gb = Gibbon::API.new
+    #TODO list = gb.lists.list({:filters => {:list_name => list_name}})
+    list_id = ENV["MAILCHIMP_LIST_ID"]
+
+    response = gb.lists.subscribe({
+      :id => list_id,
+      :email => {:email => params[:email]},
+      :update_existing => true,
+      :double_optin => false,
+      :send_welcome => true,
+      :throws_exceptions => true
+    })
+
+    if(response.is_a?(Hash))
+      puts "======= Got response: #{response}"
+      case response['code']
+      when 502
+        puts "======= Invalid Address!"
+      when 214
+        puts "======= Already signed up!"
+      else
+        puts "======= Error: #{response['error']}"
+      end
+    else
+      puts"Successfully signed up !"
+    end
+
+    redirect_to root_url
   end
 end

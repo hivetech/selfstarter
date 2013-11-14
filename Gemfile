@@ -34,5 +34,8 @@ gem 'jquery-rails'
 # Stripe Payments gem
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+# Mailchimp subscription
+gem 'gibbon', :git => 'git://github.com/amro/gibbon.git'
+
 # Configuration File
 gem 'rails_config'

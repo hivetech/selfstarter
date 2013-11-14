@@ -12,6 +12,8 @@
           <embed src="<%= Settings.video_embed_url %>?autohide=1&showinfo=0&rel=0&autoplay=1" type="application/x-shockwave-flash" width="512" height="385" allowscriptaccess="always" allowfullscreen="true"></embed>
         </object>
       </div>
+    <% elsif Settings.use_asciinema %>
+      <script type="text/javascript" src=<%= "http://asciinema.org/a/"+Settings.ascii_cast_id+".js" %> id=<%= "asciicast-"+Settings.ascii_cast_id %> async data-speed="2" data-size="small"></script>
     <% else %>
       <iframe width='512' height='385' src="<%= video_url %>"></iframe>
     <% end %>
