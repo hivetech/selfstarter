@@ -28,7 +28,7 @@ value_proposition: "The open source crowdfunded lab"
 # Replace /embed/ in your video url path with /v/ for video playback to work.
 # Use it as well for asciinema video
 video_embed_url: "https://www.youtube.com/v/D1L3o88GKew"
-ascii_cast_id: "6388"
+ascii_cast_id: "6438"
 
 # If set to true, then the image at "/assets/video_placeholder.png" will be shown in place of the youtube
 # video.  When the user clicks it, the vid will replace the image and start playing.
@@ -48,7 +48,7 @@ use_asciinema: true
 # Your keys have to be stored in enviroment
 # To find your access key and secret key, head over to here --> https://manage.stripe.com/account/apikeys
 # Price with stripe are expressed in cents
-price: 1995
+price: 5000
 
 # if use_payment_options is set to true, then a set of radio buttons will be
 # displayed with various payment options.  There is a PaymentOption model for

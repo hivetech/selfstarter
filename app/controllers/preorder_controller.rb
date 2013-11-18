@@ -5,8 +5,10 @@ class PreorderController < ApplicationController
   end
 
   def checkout!
+    #TODO Use these informations to subscribe to mailchimp
     @user = User.find_or_create_by_email!(params[:email])
     redirect_to root_url unless params[:stripe_token]
+    #TODO Custom amount selected by the user
     @amount = Settings.price
 
     customer = Stripe::Customer.create(
