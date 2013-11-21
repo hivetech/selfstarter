@@ -8,8 +8,18 @@ class PreorderController < ApplicationController
     #TODO Use these informations to subscribe to mailchimp
     @user = User.find_or_create_by_email!(params[:email])
     redirect_to root_url unless params[:stripe_token]
-    #TODO Custom amount selected by the user
-    @amount = Settings.price
+
+    if Settings.use_payment_options
+      payment_option_id = params['payment_option']
+      raise Exception.new("No payment option was selected") if payment_option_id.nil?
+      payment_option = PaymentOption.find(payment_option_id)
+      # Stripe takes amount as cents
+      @amount = (payment_option.amount * 100).to_i
+    else
+      @amount = (Settings.price * 100).to_i
+    end
+
+    puts "Charge user #{@amount}"
 
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',

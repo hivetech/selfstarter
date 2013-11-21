@@ -48,15 +48,19 @@ use_asciinema: true
 # Your keys have to be stored in enviroment
 # To find your access key and secret key, head over to here --> https://manage.stripe.com/account/apikeys
 # Price with stripe are expressed in cents
-price: 5000
+price: 50.00
 
 # if use_payment_options is set to true, then a set of radio buttons will be
 # displayed with various payment options.  There is a PaymentOption model for
 # storing info about payment options.  To set up your payment options you
-# should put code in seeds.rb, then run rake db:seed
-use_payment_options: false
+# should put code in db/seeds.rb, then run rake db:seed
+use_payment_options: true
 
 payment_description: "You really should change this text because people will see it on Amazon's order page!!!!!"
+
+use_bitcoin_payment: true
+
+twitter_template: "I am part of a revolution"
 
 # Amazon limits how much we can charge people with their Multi-Use tokens.
 # You probably should add some leeway to account for international shipping

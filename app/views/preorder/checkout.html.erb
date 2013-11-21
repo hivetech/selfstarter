@@ -18,18 +18,30 @@
 
       </p>
       <%= form_tag "#", :id => "checkout" do %>
-        <article>
-          <label class="amount">
-            <span>Amount: $50.00</span>
-          </label>
-        </article>
+        <%= render 'preorder/payment_options' %>
 
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-description="Sponsor open innovation"
-                data-amount="5000"></script>
+                data-amount="6000"></script>
       <% end %>
     </div>
+    <% if Settings.use_bitcoin_payment %>
+      <a class="coinbase-button" 
+        data-code="<%= Rails.configuration.coinbase[:button_id] %>" 
+        data-button-style="custom_small" 
+        href="https://coinbase.com/checkouts/<%= Rails.configuration.coinbase[:button_id] %>">Support with Bitcoin</a>
+      <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+    <% end %>
+
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style">
+      <a class="addthis_button_tweet" tw:via="XavierBruhiere" tw:text="<%= Settings.twitter_template %>"></a>
+    </div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5214a5fe5dbdc2b4"></script>
+    <!-- AddThis Button END -->
+
     <%= render 'preorder/checkout/sidebar' %>
+
   </div>
 </div>
