@@ -1,6 +1,6 @@
 .main_content
 {
-  width: 560px;
+  width: 460px;
   float: left;
   h3
   {
@@ -37,6 +37,8 @@
 
 .main_content.payment_options
 {
+  width: 400px;
+  float: right;
   strong
   {
     font-weight: bold;
@@ -221,7 +223,7 @@
 .sidebar
   {
   float: right;
-  width: 300px;
+  width: 400px;
   p
     {
     font-size: 18px;

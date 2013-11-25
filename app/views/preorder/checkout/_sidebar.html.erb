@@ -1,4 +1,7 @@
-<div class="sidebar">
-  <h5>When will you launch the funding?</h5>
-    <p id="sidebar"><%= Settings.checkout_sidebar %></p>
+<div class="main_content <%= "payment_options" if Settings.use_payment_options %>">
+  <div class="sidebar">
+    <h5><%= Settings.checkout_title %></h5>
+    <p id="sidebar"><%=raw Settings.checkout_sidebar %></p><br>
+    <%= render 'preorder/payment_options' %>
+  </div>
 </div>

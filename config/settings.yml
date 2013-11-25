@@ -22,7 +22,7 @@ product_description: "Your hacker's backpack"
 product_image_path: "logo-unide.png"
 
 # The message on the preorder page, Lockitron's is ""
-value_proposition: "The open source crowdfunded lab"
+value_proposition: "The open source collaborative Lab"
 
 # YouTube or Vimeo Video URL (The embed URL, without the query string options)
 # Replace /embed/ in your video url path with /v/ for video playback to work.
@@ -41,13 +41,17 @@ use_video_placeholder:
 # Embeded terminal
 use_asciinema: true 
 
+# A service for your website that makes it surprisingly easy to collaborate in
+# real-time. https://togetherjs.com
+use_collaborate: true
+
 # Amazon settings -- you'll need an Amazon Payments account, sign up here --> http://bit.ly/SGksTv
 
 #amazon_access_key: "YOUR_AMAZON_ACCESS_KEY"
 #amazon_secret_key: "YOUR_AMAZON_SECRET_KEY"
 # Your keys have to be stored in enviroment
 # To find your access key and secret key, head over to here --> https://manage.stripe.com/account/apikeys
-# Price with stripe are expressed in cents
+# Default price with stripe
 price: 50.00
 
 # if use_payment_options is set to true, then a set of radio buttons will be
@@ -61,6 +65,7 @@ payment_description: "You really should change this text because people will see
 use_bitcoin_payment: true
 
 twitter_template: "I am part of a revolution"
+twitter_id: XavierBruhiere
 
 # Amazon limits how much we can charge people with their Multi-Use tokens.
 # You probably should add some leeway to account for international shipping
@@ -91,10 +96,10 @@ ships: "We need your support"
 # On Lockitron, it's "Reserve Now"
 call_to_action: "Contribute"
 # On Lockitron, this is "Only $149 for a limited time"
-price_human: "and join the Unide community"
+price_human: "and lead the movement"
 
 # The paragraph below the price. You'd probably say something about how you're not going to charge them before it ships (so it's less risky).
-dont_give_them_a_reason_to_say_no: "Follow the open development on Github and contact us : team@unide.co"
+dont_give_them_a_reason_to_say_no: Follow the open development on <a href=https://github.com/hivetech>Github</a> and the mailing list.
 
 # Social Stuff
 facebook_app_id: "1234567890"
@@ -114,22 +119,22 @@ google_id: "UA-45617200-1"
 #  Key points
 title_point_one: What is Unide
 key_point_one: |
-  Unide is a collaborative workplace for developers combinig smart and
+  Unide is a collaborative workplace for developers combining smart and
   innovative tools. It was put together by HiveTech to help teams build complex
   softwares more efficiently.
 
 title_point_two: Try it
 key_point_two: |
   The tools we're developing are fully open source and ready to be integrated
-  in your workspace to boost and ease your work. Also, you will be soon able to
+  in your workspace to boost and ease your work. Better, you will be soon able to
   work with them on an optimized development platform hosted in the cloud.
 
 title_point_three: Quick Glance
 key_point_three: |
-  - Your environment powered by the best of open source
-  - Work with your team, in real time
-  - Plug databases, dashboards, hundreds of services
-  - Customize everything, get full control over emerging technologies
+  <ul style="list-style-type:disc;"><li> Your environment powered by the best of open source
+  <li> Work with your team, in real time</li>
+  <li> Plug databases, dashboards, hundreds of services</li>
+  <li> Customize everything, get full control over emerging technologies</li></ul>
 
 title_point_four: Get involved
 key_point_four: |
@@ -142,15 +147,15 @@ key_point_four: |
 #  Following points
 title_other_one: Community driven
 other_point_one: |
-  The common environment available is built on top of most popular
+  The common environment <a href=https://github.com/hivetech/dna>available</a> is built on top of most popular
   and powerful tools in the open source community. Unide is designed to
   easily integrate new and smart ideas that come up every day.
 
 title_other_two: Cutting edge
 other_point_two: |
-  Unide integrates (among others) the neat work done by Ubuntu,
-  Dotcloud, Google, Github. It embraces relevant emerging technologies in
-  virtualization, cloud deployment, collaboration, ...
+  Unide extends (among others) the neat work done by <a href=https://juju.ubuntu.com>Ubuntu</a>,
+  <a href=http://www.docker.io>Dotcloud</a>, <a href=https://github.com/google/lmctfy>Google</a>, <a href=https://github.com>Github</a>. 
+  It embraces relevant emerging technologies in virtualization, cloud deployment, collaboration, ...
 
 title_other_three: Secured
 other_point_three: |
@@ -169,6 +174,13 @@ blog: http://hivetech.github.io
 contact: team@unide.co
 github_profile: https://github.com/hivetech
 
-#TODO Need html rendering - checkout_main: app/views/preorder/checkout.html.erb
+checkout_main: |
+  You can contribute to unide by two means. Join us building Unide on <a
+    href=https://github.com/hivetech>Github</a> or sponsor the project
+  clicking on the button bellow (we will activate it in a few days). Either
+  ways you can subscribe to our mailing list at the bottom of the previous
+  page, and we will keep you updated.
+checkout_title: Is it safe ?
 checkout_sidebar: |
-    On November 17th ! So subscribe to our mailing list you will be hearing from us very soon.
+  We use <a href=https://stripe.com>Stripe</a> to process card payements, a
+  worldwide trusted partner
