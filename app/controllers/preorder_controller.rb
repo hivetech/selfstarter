@@ -43,6 +43,13 @@ class PreorderController < ApplicationController
   end
 
   def subscribe
+    # Needs HTML like :
+    #<%= form_tag('/preorder/subscribe', method: "post", id: "preorder", remote: "true") do -%>
+      #<label>Email Address&nbsp;
+       #<%= text_field_tag :email, nil, :class => 'email', :type=>"email", :placeholder => 'you@example.com' %>
+      #</label>
+      #<%= submit_tag "Subscribe", :class => "blue_button", :id => "subscribe_button" %>
+    #<% end %>
     # Assume MAILCHIMP_API_KEY and MAILCHIMP_LIST_ID are set
     gb = Gibbon::API.new
     #TODO list = gb.lists.list({:filters => {:list_name => list_name}})
