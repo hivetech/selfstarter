@@ -1,12 +1,14 @@
 <div class="gray_background wrapper clearfix" id='mailing-list'>
   <div class="wrapper clearfix">
     <br>
-    <form action="http://unide.us3.list-manage2.com/subscribe/post?u=eff97777aaf29aa312d8ca211&amp;id=b1c653f962" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <h4>Mailing List</h4>
-      <label>Email Address&nbsp;
-        <input type="text" name="EMAIL" class='email' placeholder="you@example.com">
-      </label>
-      <input type="submit" class='blue_button mailing' name="subscribe" value="Subscribe" />
+    <% if Settings.use_mailing %>
+      <form action="<%= Settings.mailchimp_endpoint %>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <h4>Mailing List</h4>
+        <label>Email Address&nbsp;
+          <input type="text" name="EMAIL" class='email' placeholder="you@example.com">
+        </label>
+        <input type="submit" class='blue_button mailing' name="subscribe" value="Subscribe" />
+    <% end %>
     <br>
   </div>
 </div>

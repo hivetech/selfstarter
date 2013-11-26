@@ -24,6 +24,11 @@ product_image_path: "logo-unide.png"
 # The message on the preorder page, Lockitron's is ""
 value_proposition: "The open source collaborative Lab"
 
+use_mailing: true
+# You can find this url on your mailchimp account, section lists, signup forms
+# and embedded forms
+mailchimp_endpoint: http://unide.us3.list-manage2.com/subscribe/post?u=eff97777aaf29aa312d8ca211&amp;id=b1c653f962
+
 # YouTube or Vimeo Video URL (The embed URL, without the query string options)
 # Replace /embed/ in your video url path with /v/ for video playback to work.
 # Use it as well for asciinema video
@@ -176,11 +181,11 @@ github_profile: https://github.com/hivetech
 
 checkout_main: |
   You can contribute to unide by two means. Join us building Unide on <a
-    href=https://github.com/hivetech>Github</a> or sponsor the project
-  clicking on the button bellow (we will activate it in a few days). Either
-  ways you can subscribe to our mailing list at the bottom of the previous
-  page, and we will keep you updated.
+    href=https://github.com/hivetech>Github</a> or sponsor the project right
+    away from this page. Either ways you can subscribe to our mailing list at
+    the bottom of the previous page, and we will keep you updated.
 checkout_title: Is it safe ?
 checkout_sidebar: |
   We use <a href=https://stripe.com>Stripe</a> to process card payements, a
-  worldwide trusted partner
+  worldwide trusted partner. Please notice payments are not activated, yet it is a
+  matter of days !

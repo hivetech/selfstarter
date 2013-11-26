@@ -7,24 +7,15 @@ needs.
 
 ## Selfstarter Background
 
-After a [rejection from
-Kickstarter](http://techcrunch.com/2012/10/07/the-story-of-lockitron-crowdfunding-without-kickstarter/),
-we decided to follow in the footsteps of [App.net](https://app.net/) and make
-our own crowdfunding site for [Lockitron](https://lockitron.com). We've been
-absolutely blown away by the response. As a first step in what will hopefully
-be a long history of giving back, we have decided to open source the
-crowdfunding platform that got us here. Please send questions, comments, or
-concerns to [hello@lockitron.com](mailto:hello@lockitron.com)!
+Find more about it on the [original project](https://github.com/lockitron/selfstarter#Background)
 
 Selfstarter is a starting point. We made some specific choices with Selfstarter
-for Lockitron and we recommend you tailor it for your project:
+for Unide and we recommend you tailor it for your project:
 
 * We use [Stripe](https://stripe.com) for payments. You can use Amazon Payments
-  or [WePay](https://www.wepay.com/). We used Kickstarter's awesome
-  ```amazon_flex_pay``` gem.
-* We collect multi-use tokens from customers with Amazon Payments - this let's
-  us collect payment information without charging the customer until we are
-  ready to ship
+  or [WePay](https://www.wepay.com/).
+* Optionnaly you can use bitcoin payments  through coinbase account.
+* Mailing list is powered by [Mailchimp](http://mailchimp.com/)
 * Selfstarter doesn't come with any authentication, administration, mailers or
   analytics tools. We recommend adding a basic set of these so that you can
   message backers and manage orders.
@@ -50,8 +41,8 @@ If you're using the payment options component (use_payment_options = true in
 settings.yml) then need to seed some data for the options: ```bash rake db:seed
 ```
 
-Let's get it running: ```bash PUBLISHABLE_KEY=foo_test SECRET_KEY=sk_test rails
-s ```
+Let's get it running: ```bash PUBLISHABLE_KEY=foo_test SECRET_KEY=sk_test rails s
+```
 
 ### Customizing
 
@@ -66,6 +57,9 @@ To change around the colors and fonts, open this file:
 
 ``` app/assets/stylesheets/variables.css.scss ```
 
+To change around payment options, open :
+``` db/seeds.rb ```
+
 To dive into the code, open this file:
 
 ``` app/controllers/preorder_controller.rb ```
@@ -76,22 +70,19 @@ We recommend using Heroku, and we even include a ```Procfile``` for you. All
 you need to do is first install the [Heroku
 Toolbelt](https://toolbelt.heroku.com) and then run:
 
-```bash heroku create git push heroku master heroku run rake db:migrate heroku
-open ``` ## Contributing
+```bash 
+heroku create 
+git push heroku master 
+heroku run rake db:migrate 
+heroku run rake db:seed
+heroku config:set STRIPE_PUBLISHABLE_KEY=xxx STRIPE_SECRET_KEY=xxx
+heroku config:set COINBASE_BUTTON_ID=xxx
+heroku open ``` 
+
+## Contributing
 
 In it's current state, Selfstarter is very skeletal. We welcome your pull
 requests. If you're looking to contribute, here are some good starting points.
-
-### Email Updates
-
-Using Amazon FPS will send users a notification when they place an order,
-however, it's nice to notify people when they place an order. 
-
-Something that we built into Lockitron.com was "Remind Me" functionality. The
-idea behind this is that you can capture potential backers and notify them near
-the end of your campaign that they should reserve your product. We have no data
-on this yet, however, it seems to be part of why Kickstarter campaigns pick up
-a lot of steam in their final hours.
 
 ### Reporting
 
@@ -105,13 +96,10 @@ placed it.
 
 ### Alternate Payment Processors
 
-Amazon Payments works great for us, but it may not work out for everyone. If
-you'd rather use Stripe, WePay, or any other payment processor, feel free to
+Stripe Payments works great for us, but it may not work out for everyone. If
+you'd rather use Amazon, WePay, or any other payment processor, feel free to
 send out a pull request.
 
 ### Tests
 
 There aren't any tests yet. Tests are very welcome!
-
-TODO Mailchimp integration
-TODO ascii.io integration
